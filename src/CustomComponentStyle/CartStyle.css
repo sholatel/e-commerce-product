@@ -1,0 +1,38 @@
+
+#cart-div {
+    position: relative;
+    width: auto;
+    height: fit-content;
+    
+}
+
+#cart-div img {
+    filter: brightness(0%) opacity(0.6) ;
+}
+
+#cart-div img:active {
+    filter: brightness(0%) opacity(1)
+}
+
+#cart-item-no {
+    bottom:80%;
+    left:55%;
+    position: absolute;  
+    color:#fff;
+    background-color: hsl(26, 100%, 55%);
+    border-radius:50%;
+    width: 1.5em;
+    font-size: 0.6em;
+    text-align: center;
+    margin: 0px;
+}
+
+
+/* desktop media queries for responsiveness*/
+@media only screen and (min-width: 992px) {
+    #cart-div {
+        display: none;
+    }  
+}
+
+ 

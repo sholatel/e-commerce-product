@@ -1,0 +1,43 @@
+
+#cart-div-desktop {
+    position: relative;
+    width: auto;
+    height: fit-content;
+    margin-right: 20px;
+    
+}
+
+#cart-div-desktop img {
+    filter: brightness(0%) opacity(0.6) ;
+}
+
+#cart-div-desktop img:active {
+    filter: brightness(0%) opacity(1)
+}
+
+#cart-item-no-desktop {
+    bottom:80%;
+    left:55%;
+    position: absolute;  
+    color:#fff;
+    background-color: hsl(26, 100%, 55%);
+    border-radius:50%;
+    width: 1.5em;
+    font-size: 0.6em;
+    text-align: center;
+    margin: 0px;
+}
+
+
+/* desktop media queries for responsiveness*/
+@media only screen and (max-width: 992px) {
+    #cart-div-desktop  {
+        display: none;
+    }     
+}
+
+@media only screen and (min-width: 992px) {
+    #cart-div-desktop  {
+        display: block;
+    }     
+}

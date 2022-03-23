@@ -1,0 +1,25 @@
+#profile-div, #profile-div img {
+    margin:0;
+}
+
+#profile-div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+
+/*Beginning of desktop responsiveness design*/
+@media only screen and (min-width: 992px) {
+    #profile-div:hover {
+        border:2px solid  hsl(26, 100%, 55%);        
+    }   
+
+     #profile-div img {
+        margin:0;
+        width: 100%;
+        height: 100%;
+    }
+    
+}

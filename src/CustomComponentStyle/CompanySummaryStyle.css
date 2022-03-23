@@ -1,0 +1,35 @@
+#summary-container {
+    padding: 15px;
+    width: 90%;   
+}
+
+#summary-header {
+    text-transform: uppercase;
+   }
+
+   #summary-container p {
+    font-size: 0.8em;
+    width: 100%;
+    white-space:pre-wrap;
+}
+
+
+   /* desktop responsiveness*/
+@media only screen and (min-width: 992px) {
+    #summary-container {
+        width: 100%;
+        padding: 0px;
+    }
+
+    #summary-header {
+        font-size: 0.7em;
+    }
+
+    #summary-container p {
+        font-size: 0.8em;
+        width: 100%;
+        
+    }
+  }
+  
+  
