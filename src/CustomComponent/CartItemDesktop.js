@@ -12,7 +12,9 @@ function CartItemDesktop  (props) {
 
     function onDeleteItem (evt) {
         localStorage.removeItem(evt.target.id);
-        localStorage.setItem("itemCount", String(Number(localStorage.getItem("itemCount"))-1)); 
+        if ("0".localeCompare(localStorage.getItem("itemCount"))!=0) {
+            localStorage.setItem("itemCount", String(Number(localStorage.getItem("itemCount"))-1)); 
+         } 
         updateState();
     } 
     

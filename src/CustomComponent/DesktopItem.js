@@ -6,6 +6,11 @@ import DesktopItemStyle from '../CustomComponentStyle/DesktopItemStyle.css'
 class DesktopItem extends Component {
     constructor () {
         super();
+        this.onListClicked = this.onListClicked.bind(this);
+    }
+
+    onListClicked (evt) {
+        document.getElementById("item-image-display").style.backgroundImage=`url(${images[evt.target.id]})`;
     }
 
     
@@ -17,7 +22,7 @@ class DesktopItem extends Component {
                 <div id='item-image-display' style={desktopItemDivStyle}>
                 </div>
                 <ul>
-                  { images.map (image=> <li className='images'><img src={image} width="50px" height="50px"></img></li>)}
+                  { images.map ((image, index)=>  <li onClick={this.onListClicked} className='images' key={index} ><img id={index} src={image} width="50px" height="50px"/></li>)}
                 </ul>
             </div>
 
