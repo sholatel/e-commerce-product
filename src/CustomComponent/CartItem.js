@@ -11,10 +11,15 @@ function CartItem  (props) {
     }
 
     function onDeleteItem (evt) {
+        evt.preventDefault();
         localStorage.removeItem(evt.target.id);
          if ("0".localeCompare(localStorage.getItem("itemCount"))!=0) {
             localStorage.setItem("itemCount", String(Number(localStorage.getItem("itemCount"))-1)); 
          }
+         //update the cart count node with JS DOM
+         document.getElementById("cart-item-no").innerHTML=localStorage.getItem("itemCount");
+         document.getElementById("cart-item-no-desktop").innerHTML=localStorage.getItem("itemCount");
+
         updateState();
     }
 

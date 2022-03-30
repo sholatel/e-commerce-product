@@ -46,6 +46,7 @@ class  AddToCart  extends Component {
 
 onAddToCartClicked (evt) {   
     evt.preventDefault();
+   
     // this add the new item to the localstorage of the browser so that user can have access to it in any react component of the site 
   
      //setting the cart item lenght in the local storage if it does not exist
@@ -57,6 +58,9 @@ onAddToCartClicked (evt) {
          localStorage.setItem("itemCount", String(Number(localStorage.getItem("itemCount"))+1)); 
      }
 
+     //update the cart count with js DOM 
+     document.getElementById("cart-item-no").innerHTML=localStorage.getItem("itemCount");
+     document.getElementById("cart-item-no-desktop").innerHTML=localStorage.getItem("itemCount");
      //item details are collected in json format
     let newCartItem= {
         itemName:"Autumn limited edition...",
@@ -71,7 +75,6 @@ onAddToCartClicked (evt) {
      let newCartItemStrFormat = JSON.stringify(newCartItem);     
      //item string format are stored in the localstorage with the key being the current length of the localstorage
      localStorage.setItem(localStorage.getItem("itemCount"),newCartItemStrFormat);
-     alert("You added new item to cart\n(You need to refresh the page for the new item to reflect in your cart)");
      
 }
 

@@ -12,6 +12,7 @@ import CartItem from './CustomComponent/CartItem';
 import CartItemDesktop from './CustomComponent/CartItemDesktop';
 import CartDesktop from './CustomComponent/CartDesktop';
 import DesktopItem from './CustomComponent/DesktopItem';
+import React from 'react'
 
 
 function App()  {

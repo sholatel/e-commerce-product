@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
-import cartIcon from '../icons/icon-cart.svg'
-import CartStyle from '../CustomComponentStyle/CartStyle.css'
-import CartItem  from './CartItem'
+import React, {useState} from 'react';
+import cartIcon from '../icons/icon-cart.svg';
+import CartStyle from '../CustomComponentStyle/CartStyle.css';
+import CartItem  from './CartItem';
 
 function Cart ()  {
  let [itemCount, setItemCount] = useState(localStorage.getItem('itemCount'));
